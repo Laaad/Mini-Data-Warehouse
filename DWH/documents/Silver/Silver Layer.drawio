@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36">
+  <diagram id="2YBvvXClWsGukQMizWep" name="Page-1">
+    <mxGraphModel dx="1499" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZqUTphwCREdddxumhMdi-15" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="590" width="230" x="70" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-2" parent="ZqUTphwCREdddxumhMdi-15" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="Silver Layer" vertex="1">
+          <mxGeometry height="60" width="120" x="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-5" connectable="0" parent="ZqUTphwCREdddxumhMdi-15" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="220" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-3" parent="ZqUTphwCREdddxumhMdi-5" style="whiteSpace=wrap;html=1;" value="&lt;b&gt;Explore &amp;amp; Understand &lt;/b&gt;the Data" vertex="1">
+          <mxGeometry height="70" width="220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-4" parent="ZqUTphwCREdddxumhMdi-5" style="whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="Analysing" vertex="1">
+          <mxGeometry height="30" width="140" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-6" connectable="0" parent="ZqUTphwCREdddxumhMdi-15" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="220" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-7" parent="ZqUTphwCREdddxumhMdi-6" style="whiteSpace=wrap;html=1;" value="Data Cleansing" vertex="1">
+          <mxGeometry height="70" width="220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-8" parent="ZqUTphwCREdddxumhMdi-6" style="whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="Coding" vertex="1">
+          <mxGeometry height="30" width="140" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-9" connectable="0" parent="ZqUTphwCREdddxumhMdi-15" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="220" y="354" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-10" parent="ZqUTphwCREdddxumhMdi-9" style="whiteSpace=wrap;html=1;" value="Data Correctness Checks" vertex="1">
+          <mxGeometry height="70" width="220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-11" parent="ZqUTphwCREdddxumhMdi-9" style="whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="Validating" vertex="1">
+          <mxGeometry height="30" width="140" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-12" connectable="0" parent="ZqUTphwCREdddxumhMdi-15" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="220" x="10" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-13" parent="ZqUTphwCREdddxumhMdi-12" style="whiteSpace=wrap;html=1;" value="Data Documenting &amp;amp; Versioning in GIT" vertex="1">
+          <mxGeometry height="70" width="220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-14" parent="ZqUTphwCREdddxumhMdi-12" style="whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="Docs &amp;amp; Versioning" vertex="1">
+          <mxGeometry height="30" width="140" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-19" parent="ZqUTphwCREdddxumhMdi-15" style="triangle;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;rotation=90;" value="" vertex="1">
+          <mxGeometry height="40" width="30" x="100" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-20" parent="ZqUTphwCREdddxumhMdi-15" style="triangle;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;rotation=90;" value="" vertex="1">
+          <mxGeometry height="40" width="30" x="100" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="ZqUTphwCREdddxumhMdi-21" parent="ZqUTphwCREdddxumhMdi-15" style="triangle;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;rotation=90;" value="" vertex="1">
+          <mxGeometry height="40" width="30" x="100" y="444" as="geometry" />
+        </mxCell>
+        <mxCell id="vccsKRtLrWGGKqBKpNQf-6" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="160" width="220" x="310" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="vccsKRtLrWGGKqBKpNQf-3" parent="vccsKRtLrWGGKqBKpNQf-6" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Check Quality of Bronze" vertex="1">
+          <mxGeometry height="60" width="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vccsKRtLrWGGKqBKpNQf-4" parent="vccsKRtLrWGGKqBKpNQf-6" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Write data transformations" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vccsKRtLrWGGKqBKpNQf-5" parent="vccsKRtLrWGGKqBKpNQf-6" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Insert into Silver" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
