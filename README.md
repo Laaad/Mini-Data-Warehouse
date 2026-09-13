@@ -110,7 +110,12 @@ DWH_Personal_Project/
     ├── documents/                 # Architecture & design diagrams
     │   ├── DWH Architecture.png / .drawio
     │   ├── intergration_model.png / .drawio
+    │   ├── Bronze/
+    │   │   └── Bronze Layer.png / .drawio
+    │   ├── Silver/
+    │   │   └── Silver Layer.png / .drawio
     │   └── Gold/
+    │       ├── Gold Layer.png / .drawio
     │       ├── Sales Data Mart.png / .drawio   # Star schema
     │       └── data_catalog.md                 # Column-level descriptions
     │
