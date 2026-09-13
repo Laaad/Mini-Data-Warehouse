@@ -18,10 +18,11 @@ A personal project where I build a data warehouse from scratch using the **Medal
 2. [Architecture](#architecture)
 3. [Source Systems](#source-systems)
 4. [Integration Model](#integration-model)
-5. [Naming Conventions](#naming-conventions)
-6. [Repository Structure](#repository-structure)
-7. [Getting Started](#getting-started)
-8. [Roadmap](#roadmap)
+5. [Data Model (Gold Layer)](#data-model-gold-layer)
+6. [Naming Conventions](#naming-conventions)
+7. [Repository Structure](#repository-structure)
+8. [Getting Started](#getting-started)
+9. [Roadmap](#roadmap)
 
 ---
 
@@ -72,6 +73,16 @@ How the source tables relate to each other across CRM and ERP:
 
 ---
 
+## Data Model (Gold Layer)
+
+The Gold layer is modelled as a star schema: one fact table surrounded by dimension tables, ready to be queried.
+
+![Sales Data Mart Star Schema](DWH/documents/Gold/Sales%20Data%20Mart.png)
+
+Full column-level descriptions are in [`DWH/documents/Gold/data_catalog.md`](DWH/documents/Gold/data_catalog.md).
+
+---
+
 ## Naming Conventions
 
 Full conventions are documented in [`DWH/naming_conventions.md`](DWH/naming_conventions.md). Summary:
@@ -98,16 +109,21 @@ DWH_Personal_Project/
     │
     ├── documents/                 # Architecture & design diagrams
     │   ├── DWH Architecture.png / .drawio
-    │   └── intergration_model.png / .drawio
+    │   ├── intergration_model.png / .drawio
+    │   └── Gold/
+    │       ├── Sales Data Mart.png / .drawio   # Star schema
+    │       └── data_catalog.md                 # Column-level descriptions
     │
     ├── scripts/                    # SQL scripts
     │   ├── database_init.sql       # Creates DataWarehouse DB + BRONZE/SILVER/GOLD schemas
     │   ├── BRONZE/
     │   │   ├── ddl_bronze.sql
     │   │   └── proc_load_bronze.sql
-    │   └── SILVER/
-    │       ├── ddl_silver.sql
-    │       └── proc_load_silver.sql
+    │   ├── SILVER/
+    │   │   ├── ddl_silver.sql
+    │   │   └── proc_load_silver.sql
+    │   └── GOLD/
+    │       └── ddl_gold.sql
     │
     └── naming_conventions.md
 ```
@@ -122,7 +138,7 @@ DWH_Personal_Project/
 
 2. Run [`DWH/scripts/BRONZE/ddl_bronze.sql`](DWH/scripts/BRONZE/ddl_bronze.sql) to create the Bronze tables, then execute the `proc_load_bronze` procedure to load the raw CSVs from `DWH/datasets/`.
 3. Run [`DWH/scripts/SILVER/ddl_silver.sql`](DWH/scripts/SILVER/ddl_silver.sql) to create the Silver tables, then execute the `proc_load_silver` procedure to clean and standardise the Bronze data.
-4. Gold layer scripts are coming next — see [Roadmap](#roadmap).
+4. Run [`DWH/scripts/GOLD/ddl_gold.sql`](DWH/scripts/GOLD/ddl_gold.sql) to create the Gold views (`dim_customers`, `dim_products`, `fact_sales`) on top of the Silver data.
 
 ---
 
@@ -130,8 +146,8 @@ DWH_Personal_Project/
 
 - [x] Bronze layer: raw ingestion
 - [x] Silver layer: cleansing & standardisation
-- [ ] Gold layer: modelled views
-- [ ] Data quality checks
+- [x] Gold layer: star schema views
+- [x] Data quality checks
 
 ---
 
