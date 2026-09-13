@@ -4,7 +4,7 @@ Stored Procedure: Load Silver Layer (Bronze -> Silver)
 ===============================================================================
 Script Purpose:
     This stored procedure performs the ETL (Extract, Transform, Load) process to 
-    populate the 'SILVER' schema tables from the 'bronze' schema.
+    populate the 'SILVER' schema tables from the 'BRONZE' schema.
 	Actions Performed:
 		- Truncates Silver tables.
 		- Inserts transformed and cleansed data from Bronze into Silver tables.
@@ -65,7 +65,7 @@ BEGIN
 			SELECT
 				*,
 				ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last
-			FROM bronze.crm_cust_info
+			FROM BRONZE.crm_cust_info
 			WHERE cst_id IS NOT NULL
 		) t
 		WHERE flag_last = 1; -- Select the most recent record per customer
@@ -106,7 +106,7 @@ BEGIN
 				LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt) - 1 
 				AS DATE
 			) AS prd_end_dt -- Calculate end date as one day before the next start date
-		FROM bronze.crm_prd_info;
+		FROM BRONZE.crm_prd_info;
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -154,7 +154,7 @@ BEGIN
 					THEN sls_sales / NULLIF(sls_quantity, 0)
 				ELSE sls_price  -- Derive price if original value is invalid
 			END AS sls_price
-		FROM bronze.crm_sales_details;
+		FROM BRONZE.crm_sales_details;
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -183,7 +183,7 @@ BEGIN
 				WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
 				ELSE 'n/a'
 			END AS gen -- Normalize gender values and handle unknown cases
-		FROM bronze.erp_cust_az12;
+		FROM BRONZE.erp_cust_az12;
 	    SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -209,7 +209,7 @@ BEGIN
 				WHEN TRIM(cntry) = '' OR cntry IS NULL THEN 'n/a'
 				ELSE TRIM(cntry)
 			END AS cntry -- Normalize and Handle missing or blank country codes
-		FROM bronze.erp_loc_a101;
+		FROM BRONZE.erp_loc_a101;
 	    SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
@@ -230,7 +230,7 @@ BEGIN
 			cat,
 			subcat,
 			maintenance
-		FROM bronze.erp_px_cat_g1v2;
+		FROM BRONZE.erp_px_cat_g1v2;
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
